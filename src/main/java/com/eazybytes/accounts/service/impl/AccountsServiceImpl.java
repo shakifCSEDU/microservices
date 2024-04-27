@@ -88,6 +88,11 @@ public class AccountsServiceImpl implements IAccountsService {
         return isUpdated;
     }
 
+    /**
+     *
+     * @param customer - Customer Object
+     * @return the new account details
+     */
 
     private Accounts createNewAccount(Customer customer){
         Accounts newAccount = new Accounts();
@@ -97,8 +102,7 @@ public class AccountsServiceImpl implements IAccountsService {
         newAccount.setAccountNumber(randomAccNumber);
         newAccount.setAccountType(AccountsConstants.SAVINGS);
         newAccount.setBranchAddress(AccountsConstants.ADDRESS);
-        newAccount.setCreatedAt(LocalDateTime.now());
-        newAccount.setCreatedBy("Anonymous");
+
         return newAccount;
     }
 
